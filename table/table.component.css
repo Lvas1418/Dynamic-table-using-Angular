@@ -16,3 +16,10 @@ td {
   padding: 8px;
 }
 tr:hover td {background: #ccddff;}
+.icon-up:before {
+  content: "\25B2";
+}
+
+.icon-down:before {
+  content: "\25BC";
+}
