@@ -21,10 +21,9 @@ export class TableComponent implements OnInit {
   }
 
   selectComment(comment: Comment) {
-    //this.selectedComment = comment;
+
     this.commentSelectEvent.emit(comment);
 
-    console.log(comment);
   }
 
   descendingSorting(field: any) {

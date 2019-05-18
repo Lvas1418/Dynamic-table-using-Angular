@@ -1,5 +1,5 @@
 th {
-  font-size: 13px;
+  text-align: center;
   font-weight: normal;
   background: #b9c9fe;
   border-top: 4px solid #aabcfe;
@@ -29,4 +29,7 @@ table{
 .wrapTab {
   height: 500px;
   overflow-y: scroll;
+}
+span{
+  float: right;
 }

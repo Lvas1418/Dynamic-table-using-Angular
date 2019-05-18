@@ -2,7 +2,6 @@
 
   (findNearestEvent)="onInputChanged($event)"
   (setFieldEvent)="onFieldSelected($event)">
-  works app-tool-bar
 
 </app-tool-bar>
 
@@ -12,8 +11,11 @@
   (fieldDescendingSortEvent)="onDescendingSort($event)"
   (fieldAscendingSortEvent)="onAscendingSort($event)"
   [comments]="this.usedComments">
-  app-table
 
 </app-table>
 
-<app-modal> app-modal</app-modal>
+<app-modal
+
+  [comment]="selectedComment">
+
+</app-modal>

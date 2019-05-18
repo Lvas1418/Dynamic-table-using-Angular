@@ -8,24 +8,25 @@ import {Comment} from '../model/model.module';
   styleUrls: ['./controller.component.css']
 })
 @Injectable()
+
 export class ControllerComponent implements OnInit {
 
   @Output() inputClean = new EventEmitter<any>();
+
   defaultComments: Comment[];
   selectedComment: Comment[];
   fieldForSearch: string;
-  filtredComments: Comment[];
   usedComments: Comment[];
+
   constructor(private http: HttpClient) {
   }
 
-
   ngOnInit() {
-    let fieldForSearch = 'id';
     this.getData();
   }
 
   getData() {
+
     this.http.get('https://jsonplaceholder.typicode.com/comments')
       .subscribe((data: Comment[]) => {
         this.defaultComments = data;
@@ -43,8 +44,6 @@ export class ControllerComponent implements OnInit {
   } else {
       this.usedComments = comments;
     }
-console.log('this.filtredComments=', this.usedComments);
-     this.inputClean.emit('Null');
   }
 
   onFieldSelected(field) {
@@ -64,8 +63,10 @@ console.log('this.filtredComments=', this.usedComments);
   }
 
   sort(field: any, flag: number) {
+
     let i;
     let j;
+
     (flag) ? [i, j] = [1, -1] : [i, j] = [-1, 1];
     this.defaultComments.sort(function (a, b) {
       if (a[field] < b[field]) {
