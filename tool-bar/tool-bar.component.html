@@ -1,3 +1,21 @@
-<p>
-  tool-bar works!
-</p>
+<div>
+  <label for="fieldForSearch"> В поле </label>
+  <select id="fieldForSearch" name="selectFieldForSearch" [(ngModel)]="currentField" (ngModelChange)="setField(currentField)">
+    <option value="id">Id</option>
+    <option value="postId">Post id</option>
+    <option value="name">Author</option>
+    <option value="email">Email</option>
+  </select>
+  <label for="findNearest"> найти </label>
+  <input
+
+    id="findNearest"
+    [(ngModel)]="currentValue"
+    (ngModelChange)="findNearest(currentValue)"
+
+    [value]="inputValue"
+    [style.color]="l"
+  />
+</div>
+<div>
+</div>

@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Injectable, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Comment} from '../model/model.module';
 
 @Component({

@@ -23,3 +23,10 @@ tr:hover td {background: #ccddff;}
 .icon-down:before {
   content: "\25BC";
 }
+table{
+  width: 100%;
+}
+.wrapTab {
+  height: 500px;
+  overflow-y: scroll;
+}
