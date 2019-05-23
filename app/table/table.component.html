@@ -1,0 +1,34 @@
+<div class="wrapTab">
+<table>
+  <tr>
+
+    <th> ID
+      <span (click)="descendingSorting('id')" class="icon-down"></span>
+      <span (click)="ascendingSorting('id')" class="icon-up"></span>
+    </th>
+
+    <th> Post ID
+      <span (click)="descendingSorting('postId')" class="icon-down"></span>
+      <span (click)="ascendingSorting('postId')" class="icon-up"></span>
+    </th>
+
+    <th> Author
+      <span (click)="descendingSorting('name')" class="icon-down"></span>
+      <span (click)="ascendingSorting('name')" class="icon-up"></span>
+    </th>
+
+    <th> Email
+      <span (click)="descendingSorting('email')" class="icon-down"></span>
+      <span (click)="ascendingSorting('email')"class="icon-up"></span>
+    </th>
+
+  </tr>
+
+  <tr *ngFor="let comment of comments" (click)="selectComment(comment)">
+    <td>{{ comment.id }}</td>
+    <td>{{ comment.postId }}</td>
+    <td>{{ comment.name }}</td>
+    <td>{{ comment.email }}</td>
+  </tr>
+</table>
+</div>
